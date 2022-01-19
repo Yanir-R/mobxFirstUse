@@ -11,14 +11,14 @@ export default class ItemStore {
     }
 
     @computed get unpackedItems(){
-        return this.items.filter(item => item.unPacked);
+        return this.items.filter(item => item.unpacked);
     }
     @computed get filteredPackedList(){
-        return this.packedItems.filter(item => item.value.includes(this.packedItemsFilter),
+        return this.items.filter(item => item.value.includes(this.packedItemsFilter),
         )
     }
     @computed get filteredUnpackedList(){
-        return this.unpackedItems.filter(item => item.value.includes(this.unpackedItemsFilter),
+        return this.items.filter(item => item.value.includes(this.unpackedItemsFilter),
         )
     
 }
